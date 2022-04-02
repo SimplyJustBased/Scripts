@@ -1,0 +1,159 @@
+-- Missing Table for Line 113, Just using this for a quick loadstring, table will be out of the loadstring
+
+wait(9)
+local HttpService, TPService = game:GetService"HttpService", game:GetService"TeleportService";
+local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data
+local vim = game:GetService('VirtualInputManager')
+local function m1click() 
+    vim:SendMouseButtonEvent(739,478,0,true,game,0)
+    wait()
+    vim:SendMouseButtonEvent(739,478,0,false,game,0)
+end
+
+local P = game:GetService("Workspace")["ihatebl_ackppl12"]
+
+
+G22 = Instance.new("ScreenGui")
+G22.Name = "ToHop"
+G22.Parent = game:GetService("Players")["ihatebl_ackppl12"].PlayerGui
+local F22 = Instance.new("Frame")
+F22.Parent = G22
+F22.Size = UDim2.new(0,400,0,200)
+F22.BackgroundTransparency = UDim2.new(0.8)
+F22.Position = UDim2.new(0,760,0,700)
+local P22 = Instance.new("TextLabel")
+P22.Parent = F22
+P22.Size = UDim2.new(0,400,0,200)
+P22.TextSize = 15
+P22.Text = "waiting for game"
+P22.TextWrapped = true
+local B22 = P22:Clone()
+B22.Position = UDim2.new(0,0,0,50)
+B22.BackgroundTransparency = 1
+B22.BorderSizePixel = UDim2.new(0)
+B22.Parent = P22.Parent
+B22.Text = " "
+B22.TextWrapped = true
+game:GetService("Workspace").Map.SkyArea1.PathwayTemple:Destroy()
+game:GetService("Workspace").Map.Magma.Model:Destroy()
+game:GetService("Workspace").Map.Magma:Destroy()
+
+while wait() do
+    if not P then
+         P22.Text = "Something Broke"
+        break
+    else
+         P22.Text = "Executing"
+    while wait() do
+if P.Parent ~= game:GetService("Workspace") then
+    break
+elseif P.Parent == game:GetService("Workspace").Characters then
+    break
+else
+    P22.Text = "Picking Team" 
+    wait(2.1)
+    m1click(739,478)
+end
+wait(1)
+end
+
+while wait() do
+    local A = game:GetService("Workspace")
+    local B = A:FindFirstChildWhichIsA("Tool")
+    if B then
+        game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = B.Handle.CFrame
+        P22.Text = "Teleporting to Fruits (Tooled)"
+    else
+        P22.Text = "Found All Fruits / No Fruit Exist (Tooled)"
+        break
+    end
+end
+
+while wait() do
+    local A = game:GetService("Workspace")
+    local B = A:FindFirstChild("Fruit ")
+    if B then
+        game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = B.Handle.CFrame
+        P22.Text = "Teleporting To Fruit (Non-Tooled)"
+    else
+        P22.Text = "Found All Fruit / No Fruit Exist (Non-Tooled)"
+        break
+    end
+end
+
+while wait() do
+    local A = game:GetService("Workspace")
+    local B = A:FindFirstChild("Chest3")
+    if B then
+        game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = B.CFrame
+        P22.Text = "Teleporting To Chest(Diamond)"
+    else
+        P22.Text = "Found All Chests / No Chests Exist(Diamond"
+        break  
+    end
+end
+
+while wait() do
+    local A = game:GetService("Workspace")
+    local B = A:FindFirstChild("Chest2")
+    if B then
+        game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = B.CFrame
+        P22.Text = "Teleporting To Chest(Gold)"
+    else
+        P22.Text = "Found All Chests / No Chests Exist(Gold)"
+        break
+    end
+end
+break
+end
+end
+P22.Text = "Finished Collecting"
+wait(1)
+
+for i, v in ipairs(KF) do
+    print(v .. " checking")
+    if game:GetService("Players")["ihatebl_ackppl12"].Backpack:FindFirstChild(v) or game:GetService("Workspace").Characters["ihatebl_ackppl12"]:FindFirstChild(v) then
+        B22.Text = "Wanted Fruit Found: " .. v
+    if not game:GetService("Players")["ihatebl_ackppl12"].PlayerGui:FindFirstChild("AntiHopServer") then
+        game:GetService("Players")["ihatebl_ackppl12"].PlayerGui.ToHop.Name = "AntiHopServer"
+    end
+    else
+        local RIP
+    end
+end
+
+if game:GetService("Players")["ihatebl_ackppl12"].PlayerGui:FindFirstChild("AntiHopServer") then
+    local G = game:GetService("Players")["ihatebl_ackppl12"].PlayerGui:FindFirstChild("AntiHopServer")
+    P22.Text = "Not Hopping Server, A Wanted Fruit Was Collected"
+    local U = 0
+    while wait() do
+         game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = CFrame.new(1118.8833, 0.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+          game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = CFrame.new(1118.8833, 56.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+           game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = CFrame.new(1118.8833, 106.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+            game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.CFrame = CFrame.new(1118.8833, 850.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+            game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.Anchored = true
+         U = U + 1
+         print(U)
+         if U == 100 then 
+             game:GetService("Workspace").Characters["ihatebl_ackppl12"].HumanoidRootPart.Anchored = false
+             break
+         end
+    end
+else
+    P22.Text = "Hopping Servers"
+    wait(5)
+    while wait() do
+        function ServerHop() -- ServerHop by https://v3rmillion.net/showthread.php?tid=1144400&highlight=server+hop, <3, spent so long looking for one
+   for _, v in next, OtherServers do
+       if game.JobId ~= v.id then
+           if v.maxPlayers ~= v.playing and v.ping < 1000 then
+               TPService:TeleportToPlaceInstance(game.PlaceId, v.id)
+               break
+           end
+       end
+   end
+end
+ServerHop()
+wait(50)
+end
+end
