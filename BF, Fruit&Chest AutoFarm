@@ -2,8 +2,6 @@ local KF = {
     "Light Fruit", "Dark Fruit", "Soul Fruit", "Dough Fruit", "Rumble Fruit", "Quake Fruit", "Dragon Fruit", "Venom Fruit"} -- using info from web, Update 17 Pt2
 
 wait(9)
-local HttpService, TPService = game:GetService"HttpService", game:GetService"TeleportService";
-local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data
 local vim = game:GetService('VirtualInputManager')
 local function m1click() 
     vim:SendMouseButtonEvent(739,478,0,true,game,0)
@@ -143,18 +141,6 @@ if game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("AntiHopSe
 else
     P22.Text = "Hopping Servers"
     wait(5)
-        function ServerHop() -- ServerHop by https://v3rmillion.net/showthread.php?tid=1144400&highlight=server+hop, <3, spent so long looking for one
-   for _, v in next, OtherServers do
-       if game.JobId ~= v.id then
-           if v.maxPlayers ~= v.playing and v.ping < 1000 then
-               TPService:TeleportToPlaceInstance(game.PlaceId, v.id)
-               break
-           end
-       end
-   end
-end
-while wait() do
-ServerHop()
-wait(120)
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/3bo3c0ewnj9hks/rororo/main/BLOXFRUITDFHOPPER.lua'),true))() -- not mine but <3 whoever made it
 end
 end
