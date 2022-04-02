@@ -6,7 +6,7 @@ while wait() do
 if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == false then
     repeat
         print("waiting for game to load")
-    until game:IsLoaded()
+    until game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true
     break
 end
 local vim = game:GetService('VirtualInputManager')
