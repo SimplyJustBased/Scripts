@@ -40,9 +40,9 @@ B22.BorderSizePixel = UDim2.new(0)
 B22.Parent = P22.Parent
 B22.Text = " "
 B22.TextWrapped = true
-game:GetService("Workspace").Map.SkyArea1.PathwayTemple:Destroy()
-game:GetService("Workspace").Map.Magma.Model:Destroy()
-game:GetService("Workspace").Map.Magma:Destroy()
+game:GetService("Workspace").Boats:Destroy()
+game:GetService("Workspace").NPCs:Destroy()
+game:GetService("Workspace").Map:Destroy()
 
 while wait() do
     if not P then
@@ -141,11 +141,12 @@ if game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("AntiHopSe
          U = U + 1
          print(U)
          if U == 100 then 
-             game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = false
+             print("L")
              break
          end
     end
 else
+    game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = true
     P22.Text = "Hopping Servers"
     wait(5)
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/3bo3c0ewnj9hks/rororo/main/BLOXFRUITDFHOPPER.lua'),true))() -- not mine but <3 whoever made it
