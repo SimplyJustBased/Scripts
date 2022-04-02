@@ -2,7 +2,6 @@ local KF = {
     "Light Fruit", "Dark Fruit", "Soul Fruit", "Dough Fruit", "Rumble Fruit", "Quake Fruit", "Dragon Fruit", "Venom Fruit"} -- using info from web, Update 17 Pt2
 
 wait(9)
-local AO = game:GetService("Players")["LocalPlayer"].Character
 local HttpService, TPService = game:GetService"HttpService", game:GetService"TeleportService";
 local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data
 local vim = game:GetService('VirtualInputManager')
@@ -12,7 +11,7 @@ local function m1click()
     vim:SendMouseButtonEvent(739,478,0,false,game,0)
 end
 
-local P = AO
+local P = game:GetService("Players")["LocalPlayer"].Character
 
 
 G22 = Instance.new("ScreenGui")
@@ -63,7 +62,7 @@ while wait() do
     local A = game:GetService("Workspace")
     local B = A:FindFirstChildWhichIsA("Tool")
     if B then
-        AO.HumanoidRootPart.CFrame = B.Handle.CFrame
+        game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = B.Handle.CFrame
         P22.Text = "Teleporting to Fruits (Tooled)"
     else
         P22.Text = "Found All Fruits / No Fruit Exist (Tooled)"
@@ -75,7 +74,7 @@ while wait() do
     local A = game:GetService("Workspace")
     local B = A:FindFirstChild("Fruit ")
     if B then
-       AO.HumanoidRootPart.CFrame = B.Handle.CFrame
+       game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = B.Handle.CFrame
         P22.Text = "Teleporting To Fruit (Non-Tooled)"
     else
         P22.Text = "Found All Fruit / No Fruit Exist (Non-Tooled)"
@@ -87,7 +86,7 @@ while wait() do
     local A = game:GetService("Workspace")
     local B = A:FindFirstChild("Chest3")
     if B then
-        AO.HumanoidRootPart.CFrame = B.CFrame
+        game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = B.CFrame
         P22.Text = "Teleporting To Chest(Diamond)"
     else
         P22.Text = "Found All Chests / No Chests Exist(Diamond"
@@ -99,7 +98,7 @@ while wait() do
     local A = game:GetService("Workspace")
     local B = A:FindFirstChild("Chest2")
     if B then
-        AO.HumanoidRootPart.CFrame = B.CFrame
+        game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = B.CFrame
         P22.Text = "Teleporting To Chest(Gold)"
     else
         P22.Text = "Found All Chests / No Chests Exist(Gold)"
@@ -114,7 +113,7 @@ wait(1)
 
 for i, v in ipairs(KF) do
     print(v .. " checking")
-    if game:GetService("Players")["LocalPlayer"].Backpack:FindFirstChild(v) or AO:FindFirstChild(v) then
+    if game:GetService("Players")["LocalPlayer"].Backpack:FindFirstChild(v) or game:GetService("Players")["LocalPlayer"].Character:FindFirstChild(v) then
         B22.Text = "Wanted Fruit Found: " .. v
     if not game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("AntiHopServer") then
         game:GetService("Players")["LocalPlayer"].PlayerGui.ToHop.Name = "AntiHopServer"
@@ -129,15 +128,15 @@ if game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("AntiHopSe
     P22.Text = "Not Hopping Server, A Wanted Fruit Was Collected"
     local U = 0
     while wait() do
-         AO.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 0.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
-         AO.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 56.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
-          AO.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 106.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
-            AO.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 850.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
-           AO.HumanoidRootPart.Anchored = true
+         game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 0.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+         game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 56.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+          game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 106.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+            game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = CFrame.new(1118.8833, 850.3086491, 1443.14844, 0.2930035, 0, -0.956111372, 0, 1, 0, 0.956111372, 0, 0.2930035)
+           game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = true
          U = U + 1
          print(U)
          if U == 100 then 
-             AO.HumanoidRootPart.Anchored = false
+             game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = false
              break
          end
     end
