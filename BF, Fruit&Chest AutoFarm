@@ -2,6 +2,13 @@ local KF = {
     "Light Fruit", "Dark Fruit", "Soul Fruit", "Dough Fruit", "Rumble Fruit", "Quake Fruit", "Dragon Fruit", "Venom Fruit"} -- using info from web, Update 17 Pt2
 
 wait(9)
+while wait() do
+if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == false then
+    repeat
+        print("waiting for game to load")
+    until game:IsLoaded()
+    break
+end
 local vim = game:GetService('VirtualInputManager')
 local function m1click() 
     vim:SendMouseButtonEvent(739,478,0,true,game,0)
