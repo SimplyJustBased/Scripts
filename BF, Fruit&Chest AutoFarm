@@ -143,7 +143,6 @@ if game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("AntiHopSe
 else
     P22.Text = "Hopping Servers"
     wait(5)
-    while wait() do
         function ServerHop() -- ServerHop by https://v3rmillion.net/showthread.php?tid=1144400&highlight=server+hop, <3, spent so long looking for one
    for _, v in next, OtherServers do
        if game.JobId ~= v.id then
@@ -154,7 +153,8 @@ else
        end
    end
 end
+while wait() do
 ServerHop()
-wait(50)
+wait(120)
 end
 end
